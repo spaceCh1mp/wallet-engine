@@ -2,6 +2,7 @@ package server
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"wallet-engine/config"
 	wallet2 "wallet-engine/controllers/wallet"
@@ -52,5 +53,6 @@ func Init() error {
 		),
 	).Methods(http.MethodPatch)
 
+	log.Printf("now listening on PORT %s\n", config.PORT)
 	return http.ListenAndServe(config.PORT, router)
 }

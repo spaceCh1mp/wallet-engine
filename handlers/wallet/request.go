@@ -4,8 +4,3 @@ package wallet
 type FundOrWithdrawWalletRequestBody struct {
 	Amount int `json:"amount"`
 }
-
-// ToggleWalletStatusRequestBody defines the schema for an activate/deactivate wallet request
-type ToggleWalletStatusRequestBody struct {
-	Active *bool `json:"active"`
-}
