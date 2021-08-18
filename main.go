@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"wallet-engine/server"
+)
 
 func main() {
-	fmt.Println("hello")
+	if err := server.Init(); err != nil {
+		log.Fatalln(err)
+	}
 }
